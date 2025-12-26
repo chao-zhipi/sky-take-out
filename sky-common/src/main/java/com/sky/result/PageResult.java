@@ -21,6 +21,6 @@ public class PageResult implements Serializable {
     private long total;
 
     // 当前页数据集合
-    private List<Object> records;
+    private List records;
 
 }

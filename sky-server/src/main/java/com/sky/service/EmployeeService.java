@@ -2,7 +2,9 @@ package com.sky.service;
 
 import com.sky.dto.EmployeeDTO;
 import com.sky.dto.EmployeeLoginDTO;
+import com.sky.dto.EmployeePageQueryDTO;
 import com.sky.entity.Employee;
+import com.sky.result.PageResult;
 
 /**
  * 员工服务接口
@@ -22,4 +24,11 @@ public interface EmployeeService {
      * @param employeeDTO 员工数据传输对象
      */
     void save(EmployeeDTO employeeDTO);
+
+    /**
+     * 员工分页查询
+     * @param employeePageQueryDTO 员工分页查询数据传输对象
+     * @return 分页结果
+     */
+    PageResult pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
 }
