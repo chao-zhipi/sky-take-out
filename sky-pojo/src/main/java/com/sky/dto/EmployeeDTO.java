@@ -9,6 +9,7 @@ public class EmployeeDTO implements Serializable {
 
     private Long id;
 
+    // username保证唯一
     private String username;
 
     private String name;
