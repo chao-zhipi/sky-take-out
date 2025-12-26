@@ -2,6 +2,7 @@ package com.sky.constant;
 
 /**
  * 信息提示常量类
+ * @author sky
  */
 public class MessageConstant {
 
