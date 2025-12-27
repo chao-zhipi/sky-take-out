@@ -68,6 +68,7 @@ public class EmployeeController {
 
     /**
      * 退出登录
+     *
      * @return 退出结果
      */
     @ApiOperation("员工退出")
@@ -79,6 +80,7 @@ public class EmployeeController {
 
     /**
      * 新增员工
+     *
      * @param employeeDTO 员工数据传输对象
      * @return 新增结果
      */
@@ -92,6 +94,7 @@ public class EmployeeController {
 
     /**
      * 员工分页查询
+     *
      * @param employeePageQueryDTO 员工分页查询数据传输对象
      * @return 分页结果
      */
@@ -106,8 +109,9 @@ public class EmployeeController {
 
     /**
      * 启用禁用员工账号
+     *
      * @param status 状态
-     * @param id 员工id
+     * @param id     员工id
      * @return 操作结果
      */
     @PostMapping("/status/{status}")
@@ -121,6 +125,7 @@ public class EmployeeController {
 
     /**
      * 根据id查询员工信息
+     *
      * @param id 员工id
      * @return 员工信息
      */
@@ -134,6 +139,7 @@ public class EmployeeController {
 
     /**
      * 修改员工信息
+     *
      * @param employeeDTO 员工数据传输对象
      * @return 修改结果
      */

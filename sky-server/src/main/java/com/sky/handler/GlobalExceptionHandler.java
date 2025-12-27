@@ -29,7 +29,7 @@ public class GlobalExceptionHandler {
     }
 
     /**
-     * 捕获username字段唯一约束异常
+     * 捕获name字段唯一约束异常
      * @param ex 异常对象
      * @return 异常结果对象
      */
@@ -39,10 +39,10 @@ public class GlobalExceptionHandler {
         // 获取异常信息
         String exMessage = ex.getMessage();
         if (exMessage.contains("Duplicate")) {
-            // 违反username唯一约束
-            String username = exMessage.split(" ")[2];
-            username = username.substring(1, username.length() - 1);
-            msg = "用户名" + username + MessageConstant.ALREADY_EXISTS;
+            // 违反name唯一约束
+            String name = exMessage.split(" ")[2];
+            name = name.substring(1, name.length() - 1);
+            msg = name + MessageConstant.ALREADY_EXISTS;
         }
         log.error("异常信息：{}", msg);
         return Result.error(msg);
