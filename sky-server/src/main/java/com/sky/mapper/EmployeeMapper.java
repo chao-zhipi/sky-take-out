@@ -7,6 +7,10 @@ import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 
+/**
+ * 员工Mapper
+ * @author 超之皮
+ */
 @Mapper
 public interface EmployeeMapper {
 
@@ -37,5 +41,19 @@ public interface EmployeeMapper {
      * @return 分页结果
      */
     Page<Employee> pageQuery(EmployeePageQueryDTO employeePageQueryDTO);
+
+    /**
+     * 更新员工信息（通用更新方法）
+     * @param employee 员工实体对象
+     */
+    void update(Employee employee);
+
+    /**
+     * 根据id查询员工信息
+     * @param id 员工id
+     * @return 员工实体对象
+     */
+    @Select("select * from employee where id = #{id}")
+    Employee queryById(long id);
 }
 
